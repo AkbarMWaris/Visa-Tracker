@@ -36,16 +36,14 @@ A simple and focused full‑stack app to help you track visa appointment alerts 
 > You can freely adjust logos/links if you change technologies later.
 
 ---
-🚀 Getting Started
-Prerequisites
-Node.js (LTS recommended)
+## 🚀 Getting Started
+### Prerequisites
+- Node.js (LTS recommended)
+- npm (comes with Node)
+- Git
 
-npm (comes with Node)
-
-Git
-
-Clone the Repository
-bash
+## Clone the Repository
+```bash
 git clone https://github.com/AkbarMWaris/Visa-Track.git
 cd Visa-Track
 Backend Setup
@@ -59,11 +57,6 @@ npm install
 npm run server
 # or for production-like run
 npm start
-By default, the backend runs on:
-
-text
-http://localhost:5000
-The server exposes REST endpoints under /alerts and stores all data in alerts.json.
 
 Frontend Setup
 bash
@@ -77,26 +70,22 @@ npm install
 npm run dev
 Vite will start the app at something like:
 
-text
-http://localhost:5173
-Make sure the backend is running so the frontend can communicate with it.
-
-🔐 Environment Variables
+```
+## 🔐 Environment Variables
+```
 Create a .env file in your frontend folder (e.g., client/.env or frontend/.env):
 
-text
 VITE_API_URL=http://localhost:5000
 In production or another environment, you can point this to any deployed backend URL:
 
-text
 VITE_API_URL=https://your-backend-domain.com
 The frontend uses this variable like:
 
-js
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-📜 Available Scripts
-Backend (in backend/)
-bash
+```
+## 📜 Available Scripts
+### Backend (in backend/)
+```bash
 # Install dependencies
 npm install
 
@@ -118,8 +107,9 @@ npm run build
 
 # Preview production build locally
 npm run preview
-📡 API Endpoints
-Base URL (local):
+```
+## 📡 API Endpoints
+```Base URL (local):
 
 text
 http://localhost:5000
@@ -183,7 +173,25 @@ json
 DELETE /alerts/:id
 Deletes an alert by id.
 
-Returns 204 No Content on success (commonly used pattern).
+```
+
+## 🤖 Where AI Helped vs Where I Had to Think
+### AI helped with:
+
+- Boilerplate code structure (routes, models, middleware).
+
+- HTTP status code choices and error‑handling patterns.
+
+- Suggesting a simple but clean React + CSS layout.
+
+
+### I had to think about:
+
+- Deciding the exact shape of the Alert model and which fields are required.
+
+- Designing the UX flow (form fields, table columns, status‑update buttons).
+
+- Structuring the README to match the prompt’s requirements.
 
 
 
